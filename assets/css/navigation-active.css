@@ -1,0 +1,25 @@
+/* Active Navigation Item Styles */
+.header_aera .navbar-collapse .navbar-nav.navbar-right li.active a,
+.header_aera .navbar-collapse .navbar-nav.navbar-right li a.active {
+    color: #f6b60b !important;
+    background: transparent;
+    position: relative;
+}
+
+.header_aera .navbar-collapse .navbar-nav.navbar-right li.active a::after,
+.header_aera .navbar-collapse .navbar-nav.navbar-right li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: #f6b60b;
+}
+
+/* Ensure active state is maintained on hover */
+.header_aera .navbar-collapse .navbar-nav.navbar-right li.active a:hover,
+.header_aera .navbar-collapse .navbar-nav.navbar-right li.active a:focus {
+    color: #f6b60b !important;
+}
