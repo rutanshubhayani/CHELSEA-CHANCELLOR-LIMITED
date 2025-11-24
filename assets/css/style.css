@@ -1,4 +1,3 @@
-
 /*Color Variables*/
 ::selection {
     background-color:#99a9bb;
@@ -2599,6 +2598,7 @@ h3.blog-title {
     line-height: 20px;
     color:#555 !important;
 }
+.post-info p
 .post-info p{
     line-height: 20px;
     font-size: 12px;
@@ -3152,5 +3152,129 @@ img.posi-r-img{
     
     .service-highlight-card h2 {
         font-size: 20px;
+    }
+}
+
+/* Why Choose Us Responsive Styles */
+.feature-item {
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feature-icon img {
+    max-width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-icon img {
+    transform: scale(1.1);
+}
+
+.feature-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.feature-desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.center-logo {
+    max-width: 300px;
+    height: auto;
+    margin: 40px 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 991px) {
+    .feature-item {
+        padding: 25px 15px;
+        margin-bottom: 25px;
+    }
+    
+    .feature-title {
+        font-size: 20px;
+    }
+    
+    .center-logo {
+        max-width: 250px;
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .feature-item {
+        padding: 20px 10px;
+        margin-bottom: 20px;
+    }
+    
+    .feature-title {
+        font-size: 18px;
+    }
+    
+    .feature-desc {
+        font-size: 14px;
+    }
+    
+    .center-logo {
+        max-width: 200px;
+        margin: 20px 0;
+    }
+    
+    .feature-icon img {
+        max-width: 50px;
+    }
+}
+
+@media (max-width: 575px) {
+    .feature-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .feature-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .feature-desc {
+        font-size: 13px;
+    }
+    
+    .center-logo {
+        max-width: 150px;
+        margin: 15px 0;
+    }
+    
+    .feature-icon img {
+        max-width: 40px;
+    }
+    
+    .bg_gradient_team {
+        padding: 40px 0;
     }
 }
