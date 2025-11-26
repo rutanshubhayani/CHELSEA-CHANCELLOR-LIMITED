@@ -8,6 +8,7 @@ function loadComponent(elementId, filePath) {
             if (elementId === 'header-placeholder') {
                 setupNavigation();
                 highlightActiveNavItem();
+                initStickyHeader();
             }
             if (elementId === 'footer-placeholder') {
                 setupFooterNavigation();
@@ -122,6 +123,37 @@ function highlightActiveNavItem() {
             }
         }
     });
+}
+
+// Function to pin the header when scrolling
+function initStickyHeader() {
+    const header = document.querySelector('.header_aera');
+    const placeholder = document.getElementById('header-placeholder');
+
+    if (!header) {
+        return;
+    }
+
+    const syncPlaceholderHeight = () => {
+        if (placeholder) {
+            placeholder.style.minHeight = header.offsetHeight + 'px';
+        }
+    };
+
+    const toggleStickyClass = () => {
+        if (window.scrollY > 10) {
+            header.classList.add('affix');
+            header.classList.remove('affix-top');
+        } else {
+            header.classList.add('affix-top');
+            header.classList.remove('affix');
+        }
+        syncPlaceholderHeight();
+    };
+
+    toggleStickyClass();
+    window.addEventListener('scroll', toggleStickyClass);
+    window.addEventListener('resize', syncPlaceholderHeight);
 }
 
 // Function to determine the correct component path
