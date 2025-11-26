@@ -3356,6 +3356,7 @@ h3.blog-title {
 
   .banner-text {
     line-height: 30px;
+    text-align: left;
   }
 
   .service-1 {
